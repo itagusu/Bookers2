@@ -30,6 +30,10 @@
         <li>
         <%= link_to "Log out", destroy_user_session_path, class: "fas fa-sign-out-alt nav-link text-light", method: :delete %>
         </li>
+        <li>
+      <%= link_to 'Users', user_path(current_user.id) %>
+    </li>
+
      <% else %>
         <li>
       <%= link_to 'Log in', new_user_session_path, class: "fas fa-sign-in-alt nav-link text-light" %>
