@@ -1,3 +1,12 @@
+<div class="success-message">
+<% if flash[:notice] %>
+     <p id="notice">
+       <%= flash[:notice] %>
+     </p>
+     </div>
+   <% end %>
+
+<p id="notice"></p>
 <div class="container">
   <div class="mx-auto col-11 col-sm-10 col-lg-8 col-xl-6">
 
