@@ -1,13 +1,28 @@
 class UsersController < ApplicationController
+  
   def show
     @user = User.find(params[:id])
     @book = Book.new
-    @books = Book.all
+    @books = Book.where(user_id: @user.id)
+
   end
 
   def edit
+  # if params[:id] == current_user.id
+  #   @book = Book.new
     @user = User.find(params[:id])
+  #   render action: :edit
+  # else
+  #   @user = current_user
+  #   render action: :show
+  # end  
+  
+    unless current_user.id == @user.id
+      redirect_to user_path(current_user.id)
+    end
+    
   end
+  
 
   def index
     @users = User.all
