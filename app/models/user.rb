@@ -29,9 +29,7 @@ class User < ApplicationRecord
     followings.include?(user)
    end
 
-   def current_user?(user)
-     user == current_user
-   end
+  
 
    validates :name, presence: true, length: {minimum: 2, maximum: 20}, uniqueness: true
    validates :introduction, length: {maximum: 50}
