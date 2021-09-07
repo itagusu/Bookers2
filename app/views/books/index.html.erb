@@ -27,7 +27,9 @@
                 <td><%= book.body %></td>
 
                 <td>
-                  <%= render 'books/favorite', books: book %>
+                  <div id="favorite_area_<%= book.id %>">
+                    <%= render 'books/favorite', books: book %>
+                  </div>
                 </td>
 
 
