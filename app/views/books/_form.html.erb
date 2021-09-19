@@ -1,4 +1,5 @@
   <%= form_with(model:[book, book_comment]) do |f| %>
       <%= f.text_area :comment, rows:'5',placeholder: "コメントをここに" %><br>
       <%= f.submit "送信" %>
+      <%= link_to "送信" %>
       <% end %>
