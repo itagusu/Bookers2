@@ -10,7 +10,9 @@
 
 
 <h2>User info</h2>
-<%= attachment_image_tag(user, :profile_image, :fill, 100, 100, fallback:"no_image.jpg") %>
+  <div class="image">
+  <%= attachment_image_tag(user, :profile_image, :fill, 100, 100, fallback:"no_image.jpg") %>
+  </div>
   <table class="table">
     <tbody>
       <tr>
